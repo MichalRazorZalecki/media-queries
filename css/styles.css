@@ -1,0 +1,189 @@
+/** Ogólne style **/
+
+html {
+    font-size: 100%;
+}
+
+body{
+  background: #F2F2F2;
+}
+
+header{
+  padding: 5px 10px;
+  position: fixed;
+  -webkit-box-shadow:  2px 2px 4px 0px #9B9B9B;    
+  box-shadow:  2px 2px 4px 0px #9B9B9B;
+  background: white;
+  top: 0;
+  z-index: 100;
+}
+
+p{
+    font-size: 1em;
+    margin: 0 0 1.5em;
+    line-height: 1.5;
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+}
+
+a{
+  text-decoration: none;
+  color: #38933E;
+}
+
+a:hover{
+  color: #15721B;
+}
+
+section#content,
+footer{
+  margin: 0 auto;
+  width: 600px;
+}
+
+section#content{
+  margin-top: 48px;
+}
+
+footer{
+  margin-top: 24px;
+}
+
+section#content div{
+  padding: 10px;
+  margin-top: 16px;  
+  background: #FCFCFC;
+  position: relative;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow:  0px 0px 3px 1px #B2B2B2;      
+  box-shadow:  0px 0px 3px 1px #B2B2B2;
+}
+
+section#content div p{
+  display: block;
+  margin: 0 0 16px 0;
+}
+
+.yes-no{
+  background-image: url('../img/yes_no.png');
+  width: 24px;
+  height: 24px;
+  display: block;  
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+code{
+  display: block;
+  margin: 0 0 16px 0;
+  background: #F8FFBF;
+  padding: 10px;
+}
+
+/** Media Queries **/
+
+@media all{
+  section#content .all .yes-no{background-position: 24px 0}
+}
+
+@media print{
+  section#content .print .yes-no{background-position: 24px 0}
+}
+
+@media speech{
+  section#content .speech .yes-no{background-position: 24px 0}
+}
+
+@media (min-width:2560px){
+  section#content .QSXGA .yes-no{background-position: 24px 0}
+}
+
+@media (min-width:1920px){
+  section#content .HD1080 .yes-no{background-position: 24px 0}
+}
+
+@media (min-width:800px){
+  section#content .SVGA .yes-no{background-position: 24px 0}
+}
+
+@media all and (orientation:portrait){
+  section#content .portrait .yes-no{background-position: 24px 0}
+}
+@media all and (orientation:landscape){
+  section#content .landscape .yes-no{background-position: 24px 0}
+}
+
+@media (device-height: 600px){
+  section#content .height600 .yes-no{background-position: 24px 0}
+}
+
+@media (device-height: 1080px){
+  section#content .height1080 .yes-no{background-position: 24px 0}
+}
+
+@media (device-height: 1080px){
+  section#content .height1080 .yes-no{background-position: 24px 0}
+}
+
+@media (aspect-ratio: 4/3){
+  section#content .PAL .yes-no{background-position: 24px 0} 
+}
+
+@media (aspect-ratio: 1920/1080){
+  section#content .HDTV .yes-no{background-position: 24px 0} 
+}
+
+@media (device-aspect-ratio: 4/3){
+  section#content .PAL-screen .yes-no{background-position: 24px 0} 
+}
+
+@media (device-aspect-ratio: 16/9){
+  section#content .HDTV-screen .yes-no{background-position: 24px 0} 
+}
+
+@media screen and (color){
+  section#content .color-screen .yes-no{background-position: 24px 0}
+}
+
+@media all and (color: 8){
+  section#content .true-color .yes-no{background-position: 24px 0}
+}
+
+@media all and (min-color: 4){
+  section#content .high-color .yes-no{background-position: 24px 0}
+}
+
+@media all and (color-index: 0){
+  section#content .color0 .yes-no{background-position: 24px 0}
+}
+
+@media all and (min-color-index: 256){
+  section#content .color256 .yes-no{background-position: 24px 0}
+}
+
+@media all and (monochrome){ 
+  section#content .monochrome .yes-no{background-position: 24px 0}
+}
+
+@media all and (min-monochrome: 2){ 
+  section#content .monochrome-min-2 .yes-no{background-position: 24px 0}
+}
+
+@media tv and (scan:  interlace){ 
+  section#content .interlace .yes-no{background-position: 24px 0} 
+}
+
+@media tv and (scan:  progressive){ 
+  section#content .progressive .yes-no{background-position: 24px 0} 
+}
+
+@media all and (grid){ 
+  section#content .grid .yes-no{background-position: 24px 0} 
+}
+@media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  section#content .retina .yes-no{background-position: 24px 0}
+}

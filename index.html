@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Media Queries w przykładach - Michał Załęcki - webroad.pl</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<header>
+		<a href="http://webroad.pl/html5-css3/643-media-queries-w-przykladach">Zobacz artykuł "Media Queries w przykładach" na webroad.pl</a>
+	</header>
+	<section id="content">
+		<div class="all"><p>Wszystkie urządzenia</p><span class="yes-no"></span><code tabindex="1">@media all</code></div>
+		<div class="print"><p>Tylko do druku</p><span class="yes-no"></span><code>@media print</code></div>
+		<div class="speech"><p>Tylko czytniki ekranu</p><span class="yes-no"></span><code>@media speech</code></div>
+		<div class="QSXGA"><p>Powierzchnia wyświetlania QSXGA i większa</p><span class="yes-no"></span><code>@media (min-width:2560px)</code></div>
+		<div class="HD1080"><p>Powierzchnia wyświetlania HD 1080 i większa</p><span class="yes-no"></span><code>@media (min-width:1920px)</code></div>
+		<div class="SVGA"><p>Powierzchnia wyświetlania SVGA i większa</p><span class="yes-no"></span><code>@media (min-width:800px)</code></div>
+		<div class="portrait"><p>Ekrany w pozycji pionowej</p><span class="yes-no"></span><code>@media all and (orientation:portrait)</code></div>
+		<div class="landscape"><p>Ekrany w pozycji poziomej</p><span class="yes-no"></span><code>@media all and (orientation:landscape)</code></div>
+		<div class="height600"><p>Ekrany o wysokości dokładnie 600px</p><span class="yes-no"></span><code>@media (device-height: 600px)</code></div>
+		<div class="height1080"><p>Ekrany o wysokości dokładnie 1080px</p><span class="yes-no"></span><code>@media (device-height: 1080px)</code></div>
+		<div class="PAL"><p>Powierzchnia wyświetlania formacie PAL</p><span class="yes-no"></span><code>@media (aspect-ratio: 4/3)</code></div>
+		<div class="HDTV"><p>Powierzchnia wyświetlania w formacie HDTV</p><span class="yes-no"></span><code>@media (aspect-ratio: 16/9)</code></div>
+		<div class="PAL-screen"><p>Ekran w formacie PAL</p><span class="yes-no"></span><code>@media (device-aspect-ratio: 4/3)</code></div>
+		<div class="HDTV-screen"><p>Ekran w formacie HDTV</p><span class="yes-no"></span><code>@media (device-aspect-ratio: 16/9)</code></div>
+		<div class="color-screen"><p>Tylko ekrany kolorowe</p><span class="yes-no"></span><code>@media screen and (color)</code></div>
+		<div class="true-color"><p>TrueColor (32 bity)</p><span class="yes-no"></span><code>@media screen and (color: 8)</code>
+			<p>Tu sprawa jest trochę skomplikowana. Zapytanie dokładnie brzmi "Czy to ekran i niebieski kolor zapisany jest na 8 bitach". Jest tak dlatego, że 8 bitowy monitor wyświetla kolor czerwony na 3 bitach, zielony na 3 bitach i niebieski na 2 bitach. Sprawdzenie czy ekran ma 8 bitów będzie wyglądać tak: @media all and (color: 2) - zależy od bitów na kolor niebieski. Następnie 16 bitów - czerwony na 6 bitach, zielony na 6 bitach i niebieski na 4. Odpowiednio 32 bitowy ekran - czerwony na 12 bitach, zielony na 12 bitach, niebieski na 8. Oczywiście wliczając kanał Alfa. Z jego pominięciem 32 bitowy monitor wyświetla kolor na 24 bitach.</p>
+		</div>
+		<div class="high-color"><p>Co najmniej High Color (16 bitów)</p><span class="yes-no"></span><code>@media all and (min-color: 4)</code></div>
+		<div class="color0"><p>Urządzenie nie używa CLUT</p><span class="yes-no"></span><code>@media all and  (color-index: 0)</code></div>
+		<div class="color256"><p>Minimalnie 256 kolorów (wymaga CLUT)</p><span class="yes-no"></span><code>@media all and (min-color-index: 256)</code></div>
+		<div class="monochrome"><p>Urządzenie monochromatyczne</p><span class="yes-no"></span><code>@media all and (monochrome)</code></div>
+		<div class="monochrome-min-2"><p>Urządzenie monochromatyczne i minimalnie 2 bity na piksel</p><span class="yes-no"></span><code>@media all and (min-monochrome: 2)</code></div>
+		<div class="interlace"><p>Telewizor ze skanowaniem międzyliniowym</p><span class="yes-no"></span><code>@media tv and (scan:  interlace)</code></div>
+		<div class="progressive"><p>Telewizor ze skanowaniem progresywnym</p><span class="yes-no"></span><code>@media tv and (scan:  progressive)</code></div>
+		<div class="grid"><p>Urządzenie w których na wyjściu jest siatka lub bitmapa (starsze telefony komórkowe)</p><span class="yes-no"></span><code>@media tv and (scan:  progressive)</code></div>
+		<div class="retina"><p>Retina (Urządzenia o wysokim zagęszczeniu pikseli)</p><span class="yes-no"></span><code>@media (min-resolution: 192dpi), (-webkit-min-device-pixel-ratio: 2), (min--moz-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-device-pixel-ratio: 2), (min-resolution: 2dppx)</code></div>
+	</section>
+	<footer>
+        <p>Michał Załęcki - <a href="http://webroad.pl/">webroad.pl</a></p>
+    </footer>
+</body>
+</html>
